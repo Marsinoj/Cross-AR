@@ -13,7 +13,7 @@ const MainScreen = () => {
   const navigation = useNavigation<MainScreenProp>();
 
   const handleStart = () => {
-    navigation.navigate("Permission"); // 👉 go to PermissionScreen
+    navigation.navigate("Login"); 
   };
 
   return (
@@ -23,9 +23,9 @@ const MainScreen = () => {
       resizeMode="cover"
     >
       <View style={styles.glassCard}>
-        <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={15} />
+        <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={-1} />
 
-        {/* Logo */}
+       
         <View style={styles.logoWrapper}>
           <ImageBackground 
             source={require("../assets/images/logo1.png")} 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Animated, Easing } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Animated, Easing, Alert } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useNavigation } from "@react-navigation/native";
@@ -13,7 +13,7 @@ const PermissionScreen = () => {
   const handleYes = () => alert("Requesting camera permission...");
   const handleNo = () => navigation.navigate("Main");
 
-  const logoSize = useRef(new Animated.Value(150)).current; // start smaller than 300 to fit inside
+  const logoSize = useRef(new Animated.Value(150)).current; 
   const logoX = useRef(new Animated.Value(0)).current;
   const logoY = useRef(new Animated.Value(0)).current;
 
@@ -47,7 +47,7 @@ const PermissionScreen = () => {
       resizeMode="cover"
     >
       <View style={styles.glassCard}>
-        <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={15} />
+        <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={-2} />
 
         {/* Logo Wrapper */}
         <View style={styles.logoWrapper}>
